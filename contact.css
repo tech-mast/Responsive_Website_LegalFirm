@@ -1,0 +1,457 @@
+/* blue: #606BA6;
+green: #B3BF54;
+white: #D9D9D9;
+grey:#8C8C8C;
+black:#262626; 
+
+font size(size identified in bootstrap):
+bigg title font: h2;
+small title font: h6;
+all regular text: p
+*/
+
+
+/* page body color */
+body{
+    background-color: #f0eeee !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+
+.yfontBlue{
+    color: #606BA6;
+}
+.yfontGreen{
+    color: #B3BF54;
+}
+
+/* nav bar */
+.ynavColor{
+    color: #B3BF54 !important;
+}
+.ynavColor:hover{
+    font-weight: bold;
+}
+.yiconStyle{
+    cursor: pointer;
+}
+input:focus{
+    outline: none !important;
+    outline:#B3BF54 2px dotted !important; 
+    box-shadow: 0 0 10px #B3BF54 !important;
+}
+
+/* your own css code below */
+
+.ybackcolorMessage{
+    background-color: rgb(246, 241, 190) !important;
+}
+
+.ybuttonMessage{
+    background-color: #B3BF54 !important;
+    color:  #f0eeee !important;
+}
+.ybuttonMessage:hover{
+    background-color: #606BA6 !important;
+    color: #f0eeee !important;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 960px){
+    .messageForm{
+        /* position: relative; */
+        width: 350px !important;
+        height: 290px !important;
+        height: auto;
+        background: #fff;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 2px #333;
+        z-index: 300;
+    }
+    .left,.right,.top, .bottom{
+        width: 0;
+        height: 0;
+        position: absolute;
+        /* top: 0;  */
+        z-index: 310;
+    }
+    .left{
+        /* border-left: 300px solid #337efc;*/
+        border-left: 180px solid #F8ECC2;
+        border-top: 145px solid transparent;
+        border-bottom: 145px solid transparent;
+    }
+    .right{
+        /* border-right: 300px solid #337efc; */
+        border-right: 180px solid #F8ECC2;
+        border-top: 145px solid transparent;
+        border-bottom: 145px solid transparent;
+        border-left: 180px solid transparent;
+    }
+    .top{
+        border-right: 180px solid transparent;
+        /* border-top: 200px solid #03A9F4; */
+        border-top: 130px solid #a89f79;
+        border-left: 180px solid transparent;
+        z-index: 500;
+    }
+    .bottom{
+        border-right: 180px solid transparent;
+        /* border-bottom: 160px solid #2b67cb; */
+        border-bottom: 145px solid#dbd1ab;
+    
+        border-left: 180px solid transparent;
+        border-top: 145px solid transparent;
+    }
+    .pullMessage{
+        -webkit-animation:message_animation 1s 1 ease-in-out;
+        animation:message_animation 1s 1 ease-in-out;
+        -webkit-animation-delay:.9s;
+        animation-delay:.45s;
+        -webkit-transition:1.5s;
+        transition:1.5s;
+        -webkit-transition-delay:1s;
+        transition-delay:1s;
+        transition: width 1s;
+        width: 350px;
+        /* width:900px; */
+        z-index: 350;
+    }
+    .pushMessage{
+        -webkit-animation:message_animation_push 2s 1 ease-in-out;
+        animation:message_animation_push 2s 1 ease-in-out;
+        -webkit-animation-delay:.9s;
+        -webkit-animation-delay:.45s;
+        animation-delay:.45s;
+        -webkit-transition:1.5s;
+        transition:1.5s;
+        -webkit-transition-delay:1s;
+        transition-delay:1s;
+        z-index: 300;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        /* width:580px; */
+        width:350px;
+    }
+    .openEnvelope{
+        transform-origin: top;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        -webkit-transition: transform .7s, z-index .7s ease-in-out;
+        transition: transform .7s, z-index .7s ease-in-out;
+        /* border-top:200px solid #2c3e50; */
+        border-top:200px solid #d7edff;
+        z-index: 200;
+    }
+    .closeEnvelope{
+        /* transform-origin: bottom center; */
+        transform: rotateX(20deg);
+        -webkit-transition: transform  .7s, z-index .7s, border-top 1s ease-in-out;
+        transition: transform  .7s, z-index .7s, border-top 1s ease-in-out;
+        -webkit-transition-delay: 3s;
+        transition-delay: 3s;
+        /* border-top:200px solid #03A9F4; */
+        border-top:200px solid #a89f79;
+        z-index: 500;
+    
+    }
+}
+
+@media screen and (min-width: 961px){
+
+    .pullMessage{
+        -webkit-animation:message_animation 1s 1 ease-in-out;
+        animation:message_animation 1s 1 ease-in-out;
+        -webkit-animation-delay:.9s;
+        animation-delay:.45s;
+        -webkit-transition:1.5s;
+        transition:1.5s;
+        -webkit-transition-delay:1s;
+        transition-delay:1s;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        width:900px;
+        z-index: 350;
+    }
+    .pushMessage{
+        -webkit-animation:message_animation_push 1s 1 ease-in-out;
+        animation:message_animation_push 1s 1 ease-in-out;
+        -webkit-animation-delay:.9s;
+        animation-delay:.45s;
+        -webkit-transition:1.5s;
+        transition:1.5s;
+        -webkit-transition-delay:1s;
+        transition-delay:1s;
+        z-index: 300;
+        transition: width 1s;
+        width:580px;
+    }
+
+    .messageForm{
+        /* position: relative; */
+        width: 580px;
+        min-height: 300px;
+        height: auto;
+        background: #fff;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 2px #333;
+        z-index: 300;
+    }
+    .left,.right,.top, .bottom{
+        width: 0;
+        height: 0;
+        position: absolute;
+        /* top: 0; */
+        z-index: 310;
+    }
+    .left{
+        /* border-left: 300px solid #337efc; */
+        border-left: 300px solid #F8ECC2;
+        border-top: 160px solid transparent;
+        border-bottom: 160px solid transparent;
+    }
+    .right{
+        /* border-right: 300px solid #337efc; */
+        border-right: 300px solid #F8ECC2;
+        border-top: 160px solid transparent;
+        border-bottom: 160px solid transparent;
+        border-left: 300px solid transparent;
+    }
+    .top{
+        border-right: 300px solid transparent;
+        /* border-top: 200px solid #03A9F4; */
+        border-top: 200px solid #a89f79;
+        border-left: 300px solid transparent;
+        z-index: 500;
+    }
+    .bottom{
+        border-right: 300px solid transparent;
+        /* border-bottom: 160px solid #2b67cb; */
+        border-bottom: 160px solid#dbd1ab;
+    
+        border-left: 300px solid transparent;
+        border-top: 160px solid transparent;
+    }
+    .openEnvelope{
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        -webkit-transition: transform .7s, z-index .7s ease-in-out;
+        transition: transform .7s, z-index .7s ease-in-out;
+        /* border-top:200px solid #2c3e50; */
+        border-top:200px solid #d7edff;
+        z-index: 200;
+    }
+    .closeEnvelope{
+        /* transform-origin: bottom center; */
+        -webkit-transform: rotateX(20deg);
+        transform: rotateX(20deg);
+        -webkit-transition: transform  .7s, z-index .7s, border-top 1s ease-in-out;
+        transition: transform  .7s, z-index .7s, border-top 1s ease-in-out;
+        -webkit-transition-delay: 3s;
+        transition-delay: 3s;
+        /* border-top:200px solid #03A9F4; */
+        border-top:200px solid #a89f79;
+        z-index: 500;
+    
+    }
+}
+
+
+.pullMessage{
+	-webkit-animation:message_animation 1s 1 ease-in-out;
+	animation:message_animation 1s 1 ease-in-out;
+	/* -webkit-animation-delay:.9s;
+	animation-delay:.45s; */
+	transition:1.5s;
+    transition-delay:.4s;
+    transition: width 1s;
+    width:900px;
+	z-index: 350;
+}
+.pushMessage{
+    -webkit-animation:message_animation_push 1s 1 ease-in-out;
+	animation:message_animation_push 1s 1 ease-in-out;
+	/* -webkit-animation-delay:.4s;
+	animation-delay:.4s; */
+	transition:.3s;
+	transition-delay:.3s;
+    z-index: 300;
+    transition: width .8s;
+    width:580px;
+}
+
+.openEnvelope{
+    transform-origin: top;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transition: transform .7s, z-index .7s ease-in-out;
+    transition: transform .7s, z-index .7s ease-in-out;
+    /* border-top:200px solid #2c3e50; */
+    border-top:200px solid #d7edff;
+    z-index: 200;
+}
+.closeEnvelope{
+    /* transform-origin: bottom center; */
+    transform: rotateX(20deg);
+    -webkit-transition: transform  .9s, z-index .7s, border-top 1s ease-in-out;
+    transition: transform  .9s, z-index .7s, border-top 1s ease-in-out;
+    -webkit-transition-delay: .7s;
+    transition-delay: .7s;
+    /* border-top:200px solid #03A9F4; */
+    border-top:200px solid #a89f79;
+    z-index: 500;
+
+}
+.emailSend{
+    -webkit-animation:emailMoving .5s 1 1.3s linear;
+    animation:emailMoving .5s 1 1.3s linear;
+    /* transition: visibility 3s ease-in-out;
+    transition-delay:1s; */
+    position: relative;
+    /* visibility:hidden; */
+}
+
+.emailWrapper{
+    display : none;
+}
+
+@-webkit-keyframes message_animation{
+    0%{
+        transform: translateY(0px);
+        z-index: 300;
+ 
+    }
+    50%{
+        transform: translateY(-340px);
+        z-index: 300;
+
+    }
+    51%{
+        transform: translateY(-340px);
+        z-index: 350;
+ 
+    }
+    100%{
+        transform: translateY(0px);
+        z-index: 350;
+
+    }
+}
+@keyframes message_animation{
+    0%{
+        transform: translateY(0px);
+        z-index: 300;
+
+    }
+    50%{
+        transform: translateY(-340px);
+        z-index: 300;
+ 
+    }
+    51%{
+        transform: translateY(-340px);
+        z-index: 350;
+
+    }
+    100%{
+        transform: translateY(0px);
+        z-index: 350;
+
+    }
+}
+
+@-webkit-keyframes message_animation_push{
+    0%{
+        transform: translateY(0px);
+        z-index: 350;
+ 
+    }
+    50%{
+        transform: translateY(-340px);
+        z-index: 350;
+
+    }
+    51%{
+        transform: translateY(-340px);
+        z-index: 200;
+ 
+    }
+    100%{
+        transform: translateY(0px);
+        z-index: 200;
+
+    }
+}
+@keyframes message_animation_push{
+    0%{
+        transform: translateY(0px);
+        z-index: 350;
+
+    }
+    50%{
+        transform: translateY(-340px);
+        z-index: 350;
+ 
+    }
+    51%{
+        transform: translateY(-340px);
+        z-index: 200;
+
+    }
+    100%{
+        transform: translateY(0px);
+        z-index: 200;
+
+    }
+}
+@-webkit-keyframes emailMoving{
+    0%{
+        left:400px;
+ 
+    }
+    25%{
+        left:600px;
+    }
+    50%{
+        left:1000px;
+    }
+    75%{
+        left: 1200px;
+        visibility:visible;
+    }
+    100%{
+        left: 1400px;
+        visibility:hidden;
+    }
+}
+@keyframes emailMoving{
+    0%{
+        left:400px;
+ 
+    }
+    25%{
+        left:600px;
+    }
+    50%{
+        left:1000px;
+    }
+    75%{
+        left: 1200px;
+        visibility:visible;
+    }
+    100%{
+        left: 1400px;
+        visibility:hidden;
+    }
+}
+
+/* right side part */
+
+.yiconStyle{
+    cursor: pointer;
+}
